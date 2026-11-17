@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://free-speech-to-text.web-free.site/sitemap.xml
