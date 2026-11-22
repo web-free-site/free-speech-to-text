@@ -12,7 +12,7 @@ const BANNER = (key, w, h) =>
 const footer = `
 <footer style="margin-top:2rem;padding:1.5rem 1rem;border-top:1px solid #e5e7eb;font-size:.875rem;color:#4b5563">
 <p><strong>Free Speech to Text</strong> — Based on <a href="https://github.com/huggingface/transformers.js-examples/tree/main/whisper-word-timestamps">whisper-word-timestamps</a> (Apache-2.0). Uses <a href="https://github.com/openai/whisper">OpenAI Whisper</a>, <a href="https://huggingface.co/docs/transformers.js">Transformers.js</a>, and <a href="https://huggingface.co/onnx-community/whisper-base_timestamped">onnx-community/whisper-base_timestamped</a>. Hub: <a href="https://web-free.site">web-free.site</a> · <a href="https://free-text-to-speech.web-free.site">Free Text to Speech</a></p>
-<p><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/how-to-transcribe-audio-to-text-in-the-browser/">How-to</a> · <a href="/how-to-export-speech-to-text-as-srt/">SRT export</a> · <a href="https://araplhn.org/4/b0bd321d050f36ee3f1b36c02b48f12e" rel="noopener sponsored">Partner link</a></p>
+<p><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/how-to-transcribe-audio-to-text-in-the-browser/">How-to</a> · <a href="/how-to-export-speech-to-text-as-srt/">SRT export</a> · <a href="/how-to-transcribe-a-voice-note-to-text/">Voice notes</a> · <a href="https://araplhn.org/4/b0bd321d050f36ee3f1b36c02b48f12e" rel="noopener sponsored">Partner link</a></p>
 </footer>`;
 
 const headAds = `
@@ -144,6 +144,38 @@ const pages = [
 <p>After transcription on <a href="/">Free Speech to Text</a>, click <strong>Download SRT</strong>. Subtitle cues are built from Whisper word timestamps.</p>
 <p>If timing spans look too long for a single chunk, the app automatically retries inference with a 29-second chunk length.</p>
 <p>Import the <code>.srt</code> file into video editors (DaVinci Resolve, Premiere, etc.) or upload to YouTube as captions.</p>`,
+  },  {
+    slug: "how-to-transcribe-a-voice-note-to-text",
+    title: "How to Transcribe a Voice Note to Text for Free",
+    description:
+      "Turn a voice message or phone recording into text in your browser with Whisper: save the audio file, load the model, transcribe, then copy or download TXT.",
+    jsonLd: [{"@context": "https://schema.org", "@type": "HowTo", "name": "How to transcribe a voice note to text", "description": "Turn a voice message or phone recording into text in your browser with Whisper: save the audio file, load the model, transcribe, then copy or download TXT.", "inLanguage": "en", "url": "https://free-speech-to-text.web-free.site/how-to-transcribe-a-voice-note-to-text", "step": [{"@type": "HowToStep", "position": 1, "name": "Save the voice note as a file", "text": "Export or share the voice message from your messaging or recorder app so you have an audio file on your device."}, {"@type": "HowToStep", "position": 2, "name": "Load the model", "text": "Open Free Speech to Text and click Load model; the Whisper model is downloaded once and cached."}, {"@type": "HowToStep", "position": 3, "name": "Pick the language and upload", "text": "Choose the spoken language, then upload the audio file."}, {"@type": "HowToStep", "position": 4, "name": "Transcribe and export", "text": "Click Transcribe, check the text, then use Copy text or Download TXT."}]}],
+    body: `
+<h1>How to transcribe a voice note to text</h1>
+<p>Voice notes are quick to send but slow to search, quote or forward as text. You can transcribe one in your browser with <a href="/">Free Speech to Text</a>: the Whisper model runs on your device, so the recording is not uploaded to our servers.</p>
+<h2>1. Get the voice note as an audio file</h2>
+<ul>
+<li><strong>Messaging apps</strong>: most let you share or export a voice message to your phone&#39;s files, or save it from the desktop or web version of the app. Voice messages are often in Opus/OGG or M4A format.</li>
+<li><strong>Phone recorder apps</strong>: use the app&#39;s share or export option to save the recording (usually M4A, MP3 or WAV).</li>
+<li>Only transcribe recordings you have the right to use, especially messages from other people.</li>
+</ul>
+<h2>2. Load the model</h2>
+<p>Open the <a href="/">home page</a> and click <strong>Load model</strong>. The first load downloads the multilingual Whisper model and caches it in your browser, so it takes longer than later visits. A recent desktop browser is the most reliable; on a phone, close other tabs to free memory.</p>
+<h2>3. Choose the spoken language and upload</h2>
+<p>Pick <strong>English</strong>, <strong>French</strong> or <strong>Swahili</strong> (other Whisper languages are under the advanced option), then upload the audio file. If your browser cannot decode the file format, convert it to MP3 or WAV first with any audio converter and try again.</p>
+<h2>4. Transcribe, check, and export</h2>
+<ol>
+<li>Click <strong>Transcribe</strong> and keep the tab open until it finishes.</li>
+<li>Read the result: names, numbers and words spoken over background noise are the usual mistakes, so correct them before you reuse the text.</li>
+<li>Use <strong>Copy text</strong> to paste it into a message or document, or <strong>Download TXT</strong> to keep a file. <strong>Download SRT</strong> gives timed subtitles if you need them.</li>
+</ol>
+<h2>Tips for better results</h2>
+<ul>
+<li>Clear speech close to the microphone transcribes far better than a noisy street recording.</li>
+<li>Long recordings take longer; for a very long message, split the audio into shorter parts.</li>
+<li>If the language is mixed, choose the language spoken most often.</li>
+</ul>
+<p>Related guides: <a href="/how-to-transcribe-audio-to-text-in-the-browser">how to transcribe audio to text in the browser</a> and <a href="/how-to-export-speech-to-text-as-srt">how to export speech to text as SRT</a>.</p>`,
   },
 ];
 
@@ -161,6 +193,7 @@ for (const p of pages) {
     description: p.description,
     canonical,
     body: p.body,
+    jsonLd: p.jsonLd || [],
   });
   fs.writeFileSync(path.join(dir, "index.html"), html);
 }

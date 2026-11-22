@@ -84,6 +84,12 @@ export default function Footer() {
             Export SRT
           </a>
           <a
+            className="underline hover:text-blue-600"
+            href="/how-to-transcribe-a-voice-note-to-text/"
+          >
+            Transcribe a voice note
+          </a>
+          <a
             className="text-xs text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
             href="https://araplhn.org/4/b0bd321d050f36ee3f1b36c02b48f12e"
             rel="noopener noreferrer sponsored"
