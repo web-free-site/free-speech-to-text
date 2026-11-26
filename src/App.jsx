@@ -6,6 +6,7 @@ import MicrophoneRecorder from "./components/MicrophoneRecorder";
 import Transcript from "./components/Transcript";
 import LanguageSelector from "./components/LanguageSelector";
 import Layout from "./components/Layout";
+import SeoContent from "./components/SeoContent";
 
 async function hasWebGPU() {
   if (!navigator.gpu) return false;
@@ -223,29 +224,7 @@ function App() {
           </section>
         )}
 
-        <section className="text-sm text-gray-600 dark:text-gray-400 border-t pt-4">
-          <h2 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">FAQ</h2>
-          <dl className="space-y-2">
-            <div>
-              <dt className="font-medium">Does my audio leave the device?</dt>
-              <dd>No. Transcription runs entirely in your browser after the model is cached.</dd>
-            </div>
-            <div>
-              <dt className="font-medium">Which languages are supported?</dt>
-              <dd>
-                Whisper is multilingual. This UI highlights English, French, and Swahili for quick
-                selection.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-medium">Can I export subtitles?</dt>
-              <dd>
-                Yes — copy plain text or download TXT and SRT files with word timestamps after
-                transcription.
-              </dd>
-            </div>
-          </dl>
-        </section>
+        <SeoContent />
       </article>
     </Layout>
   );
