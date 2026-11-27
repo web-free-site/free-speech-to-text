@@ -4,19 +4,26 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/hf-logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Speech to Text</title>
+    <title>Free Speech to Text — Transcribe Audio Online in Your Browser</title>
     <meta
       name="description"
-      content="Free in-browser speech to text with Whisper word timestamps. Transcribe audio, video, or microphone — no uploads."
+      content="Free speech to text in your browser with OpenAI Whisper. Transcribe microphone, audio, or video locally—export TXT or SRT. No sign-up, no upload for transcription."
     />
     <link rel="canonical" href="https://free-speech-to-text.web-free.site/" />
-    <meta property="og:title" content="Free Speech to Text" />
+    <meta property="og:title" content="Free Speech to Text — Transcribe Audio Online in Your Browser" />
     <meta
       property="og:description"
-      content="Transcribe speech locally with Whisper. Export TXT and SRT. English, French, Swahili."
+      content="Turn speech into text with Whisper in your browser. Word timestamps, TXT and SRT export, English, French, and Swahili—free and local."
     />
     <meta property="og:url" content="https://free-speech-to-text.web-free.site/" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Free Speech to Text" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Speech to Text — Transcribe Audio Online in Your Browser" />
+    <meta
+      name="twitter:description"
+      content="Free in-browser speech to text with Whisper. Transcribe audio or video locally and download TXT or SRT subtitles."
+    />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -25,7 +32,56 @@
         "url": "https://free-speech-to-text.web-free.site/",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Web browser",
+        "description": "Transcribe audio, video, and microphone input to text with word-level timestamps using Whisper in the browser.",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does my audio leave the device?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. After the Whisper model is cached in your browser, transcription runs entirely on your device. Audio files, microphone recordings, and video soundtracks are not uploaded to our servers for processing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which languages does this free speech to text tool support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The underlying Whisper model is multilingual. This interface lets you pick English, French, or Swahili for faster setup; Whisper can still recognize many other languages when speech is clear."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I export subtitles or a transcript file?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. After transcription finishes, copy the plain text or download TXT and SRT files. SRT uses word-level timestamps from the timestamped Whisper model so you can edit captions in any video editor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need an account or API key?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No sign-up and no API key are required. Open the page, load the model once (a one-time download that browsers cache), then transcribe as often as you like at no charge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What audio and video formats can I use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can record from your microphone in the page or upload common audio and video files from your device. The tool extracts audio at 16 kHz for Whisper; for long clips, use a desktop browser with enough memory and WebGPU when available for faster inference."
+            }
+          }
+        ]
       }
     </script>
     <script data-cfasync="false" src="https://abscloud.org/1/895b72aa33f804795001790dbde9c7de"></script>
