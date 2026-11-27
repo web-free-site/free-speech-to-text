@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/generate-static-pages.mjs && node scripts/inject-more-tools.mjs && node scripts/inject-hub-legal.mjs",
+    "build": "vite build && node scripts/inject-homepage-prerender.mjs && node scripts/generate-static-pages.mjs && node scripts/inject-more-tools.mjs && node scripts/inject-hub-legal.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
